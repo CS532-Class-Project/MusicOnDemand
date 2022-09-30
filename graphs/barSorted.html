@@ -1,0 +1,64 @@
+<html>
+  <head>
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>条形图</title>
+     <script src="js/d3plus@2.js"></script>
+  	
+    <style>
+      #viz{margin:0 20px 0 0;
+	  height: 100%;
+            overflow: hidden;
+			
+      }
+	  
+    </style>
+  </head>
+  <body>
+   <div id="viz" class="mr-1">
+  
+   </div>
+    <script>
+          var myData = [
+{"name":"南屏镇","pop":67},
+{"name":"翠香街道","pop":54},
+{"name":"前山街道","pop":43},
+{"name":"吉大街道","pop":36},
+{"name":"狮山街道","pop":31},
+{"name":"香湾街道","pop":30},
+{"name":"梅华街道","pop":29},
+{"name":"拱北街道","pop":26},
+{"name":"湾仔街道","pop":14},
+      ]; 
+	  
+	   new d3plus.BarChart()
+		 .config({
+          data: myData,  //绑定数据集合
+         groupBy: "name", //分组变量
+		 select: "#viz",
+          x: "name",
+          y: "pop",
+		 groupPadding:10, //设定条间距
+         xSort: (a, b) => a["pop"] - b["pop"],//排序
+		 label: d => `${d['pop']}`,	//显示y数值
+		 legend: false, //不显示图例。  
+        })    
+        .render();
+	
+/*	
+      new d3plus.BarChart()
+        .config({
+          data: myData,  //绑定数据集合
+          groupBy: "name", //分组变量
+		  groupPadding:30, //设定条间距
+          x: "name",  
+          y: "pop",
+		 
+          legend: true //不显示图例。 
+          })
+        .render();
+		*/
+    </script>
+  </body>
+</html>

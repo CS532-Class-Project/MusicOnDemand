@@ -1,0 +1,38 @@
+<meta charset="utf-8">
+<script src="js/d3.js"></script>
+<script src="js/d3plus.js"></script>
+ <style>
+.graph{
+  height: 400px;
+  width: 560px
+} 
+     #viz{margin:0 20px 0 0;
+	  height: 100%;
+            overflow: hidden;
+      }
+    </style>
+<div id="viz" class="graph"></div>
+
+<script>
+
+  var connections = [
+    {"source": "alpha", "target": "beta", "strength": 1.25},
+    {"source": "alpha", "target": "gamma", "strength": 2.463},
+    {"source": "beta", "target": "delta", "strength": 0.823},
+    {"source": "beta", "target": "epsilon", "strength": 1.563},
+    {"source": "zeta", "target": "gamma", "strength": 3.125},
+    {"source": "theta", "target": "gamma", "strength": 0.732},
+    {"source": "eta", "target": "gamma", "strength": 2.063}
+  ]
+
+  var visualization = d3plus.viz()
+    .container("#viz")
+    .type("rings")
+    .edges({
+      "size": "strength",
+      "value": connections
+    })
+    .focus("alpha")
+    .draw()
+
+</script>

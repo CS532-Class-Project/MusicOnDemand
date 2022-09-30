@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+ <head>
+<meta charset="utf-8">
+
+<!-- Load d3.js -->
+<script src="js/d3.v4.js"></script>
+   <script src="js/d3plus-plot.v0.9.full.min.js"></script>
+
+    <style>
+
+    #viz {
+  height: 230px;
+  width: 380px;
+}
+  </style>
+
+  </head>
+  
+  <body>
+<div id="viz"></div>
+
+<script>
+
+// Read the data and compute summary statistics for each specie
+
+var data = [{"x":"x","value":12},{"x":"x","value":19},{"x":"x","value":11},{"x":"x","value":13},{"x":"x","value":12},{"x":"x","value":22},
+{"x":"x","value":13},{"x":"x","value":4},{"x":"x","value":15},{"x":"x","value":16},{"x":"x","value":18},{"x":"x","value":19},{"x":"x","value":20},
+{"x":"x","value":12},{"x":"x","value":11},{"x":"x","value":9}];
+
+   new d3plus.BoxWhisker()
+        .config({
+         data: data,
+		 select: "#viz",
+		  discrete: "y",
+      groupBy: ["value"],
+    x: "value",
+    y: "x",
+	legend: false,
+    shapeConfig: {
+      Box: {
+        orient: "horizontal",
+      }
+    }
+      })
+  .render();
+</script>
+  </body>
+
+</html>

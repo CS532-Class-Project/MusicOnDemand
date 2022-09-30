@@ -1,0 +1,17 @@
+myData=[
+        {id: "apple",  y: 5,  x: 2014},
+        {id: "banana", y: 4,  x: 2014},
+        {id: "cherry", y: 7,  x: 2014},
+        {id: "apple",  y: 7,  x: 2015},
+        {id: "banana", y: 6,  x: 2015},
+        {id: "cherry", y: 9,  x: 2015},
+        {id: "apple",  y: 10, x: 2016},
+        {id: "banana", y: 8,  x: 2016},
+        {id: "cherry", y: 5,  x: 2016},
+        {id: "apple",  y: 6,  x: 2017},
+        {id: "banana", y: 10, x: 2017},
+        {id: "cherry", y: 10, x: 2017},
+        {id: "apple",  y: 8,  x: 2018},
+        {id: "banana", y: 15, x: 2018},
+        {id: "cherry", y: 12, x: 2018}
+      ]

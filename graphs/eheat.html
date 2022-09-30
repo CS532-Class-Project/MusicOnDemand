@@ -1,0 +1,118 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+	<script src="js/d3-array.js"></script>
+    <script src="js/d3.v4.js"></script>
+    <script src="js/echarts.js"></script>
+	<script src="data/heatmap_data.js"></script>
+ <style>
+     #viz{margin:0 0 0 0;
+	  height: 100%;
+            overflow: hidden;
+      }
+    </style>
+	 </head>
+  <body>
+  <div id="viz"></div>
+    <script>
+var chartDom = document.getElementById('viz');
+var myChart = echarts.init(chartDom);
+
+// Labels of row and columns -> unique identifier of the column called 'group' and 'variable'
+  var myGroups = d3.map(data, function(d){return d.group;}).keys()
+  var myVars = d3.map(data, function(d){return d.variable;}).keys()
+function change2Num(name)
+{
+    switch(name)
+{
+    case "A" : case "v1":
+	     return 0;
+		 break;
+    case "B": case"v2":
+        return 1;
+		 break;
+	case "C": case"v3":
+	     return 2;
+		 break;
+    case "D": case"v4":
+        return 3;
+		 break;	
+	case "E": case"v5":
+	     return 4;
+		 break;
+    case "F": case"v6":
+        return 5;
+		 break;	
+	case "G": case"v7":
+	     return 6;
+		 break;
+    case "H": case"v8":
+        return 7;
+		 break;	
+	case "I": case"v9":
+	     return 8;
+		 break;
+    case "J": case"v10":
+        return 9;
+		 break;			 
+		 
+}		 
+}
+var data2=[];
+for (var i = 0; i < data.length; i += 1) {
+data2[i] = [change2Num(data[i]["group"]),change2Num(data[i]['variable']),data[i]["value"]];
+}
+var option;
+
+option = {
+  tooltip: {
+    position: 'top'
+  },
+  grid: {
+    right:'18%',
+    height: '90%',
+    top: '0%'
+  },
+  xAxis: {
+    type: 'category',
+    data: myVars,
+    splitArea: {
+      show: true
+    }
+  },
+  yAxis: {
+    type: 'category',
+    data: myGroups,
+    splitArea: {
+      show: true
+    }
+  },
+  visualMap: {
+    min: 0,
+    max: 100,
+    calculable: true,
+    orient: 'vertical',
+  // left: 'center',
+    right: '0%'
+  },
+  series: [
+    {
+      name: 'Punch Card',
+      type: 'heatmap',
+      data: data2,
+      label: {
+        show: true
+      },
+      emphasis: {
+        itemStyle: {
+          shadowBlur: 10,
+          shadowColor: 'rgba(0, 0, 0, 0.5)'
+        }
+      }
+    }
+  ]
+};
+option && myChart.setOption(option);
+ </script>
+  </body>
+</html>

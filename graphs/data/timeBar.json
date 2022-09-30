@@ -1,0 +1,1234 @@
+               data=[
+                {
+                  "Year": 2009,
+                  "Race ID": 0,
+                  "Race": "White Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 372379
+                },
+                {
+                  "Year": 2009,
+                  "Race ID": 0,
+                  "Race": "White Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 7761
+                },
+                {
+                  "Year": 2009,
+                  "Race ID": 1,
+                  "Race": "Black or African American Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 43841
+                },
+                {
+                  "Year": 2009,
+                  "Race ID": 1,
+                  "Race": "Black or African American Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 1299
+                },
+                {
+                  "Year": 2009,
+                  "Race ID": 2,
+                  "Race": "American Indian & Alaska Native Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 3218
+                },
+                {
+                  "Year": 2009,
+                  "Race ID": 2,
+                  "Race": "American Indian & Alaska Native Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 54
+                },
+                {
+                  "Year": 2009,
+                  "Race ID": 3,
+                  "Race": "Asian Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 11751
+                },
+                {
+                  "Year": 2009,
+                  "Race ID": 3,
+                  "Race": "Asian Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 58
+                },
+                {
+                  "Year": 2009,
+                  "Race ID": 4,
+                  "Race": "Native Hawaiian & Other Pacific Islander Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 195
+                },
+                {
+                  "Year": 2009,
+                  "Race ID": 4,
+                  "Race": "Native Hawaiian & Other Pacific Islander Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 170
+                },
+                {
+                  "Year": 2009,
+                  "Race ID": 5,
+                  "Race": "Some Other Race Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 513
+                },
+                {
+                  "Year": 2009,
+                  "Race ID": 5,
+                  "Race": "Some Other Race Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 2989
+                },
+                {
+                  "Year": 2009,
+                  "Race ID": 6,
+                  "Race": "Two or More Races",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 8504
+                },
+                {
+                  "Year": 2009,
+                  "Race ID": 6,
+                  "Race": "Two or More Races",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 1114
+                },
+                {
+                  "Year": 2010,
+                  "Race ID": 0,
+                  "Race": "White Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 371570
+                },
+                {
+                  "Year": 2010,
+                  "Race ID": 0,
+                  "Race": "White Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 10333
+                },
+                {
+                  "Year": 2010,
+                  "Race ID": 1,
+                  "Race": "Black or African American Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 47742
+                },
+                {
+                  "Year": 2010,
+                  "Race ID": 1,
+                  "Race": "Black or African American Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 1315
+                },
+                {
+                  "Year": 2010,
+                  "Race ID": 2,
+                  "Race": "American Indian & Alaska Native Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 3272
+                },
+                {
+                  "Year": 2010,
+                  "Race ID": 2,
+                  "Race": "American Indian & Alaska Native Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 239
+                },
+                {
+                  "Year": 2010,
+                  "Race ID": 3,
+                  "Race": "Asian Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 13941
+                },
+                {
+                  "Year": 2010,
+                  "Race ID": 3,
+                  "Race": "Asian Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 86
+                },
+                {
+                  "Year": 2010,
+                  "Race ID": 4,
+                  "Race": "Native Hawaiian & Other Pacific Islander Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 146
+                },
+                {
+                  "Year": 2010,
+                  "Race ID": 4,
+                  "Race": "Native Hawaiian & Other Pacific Islander Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 185
+                },
+                {
+                  "Year": 2010,
+                  "Race ID": 5,
+                  "Race": "Some Other Race Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 581
+                },
+                {
+                  "Year": 2010,
+                  "Race ID": 5,
+                  "Race": "Some Other Race Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 3752
+                },
+                {
+                  "Year": 2010,
+                  "Race ID": 6,
+                  "Race": "Two or More Races",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 9158
+                },
+                {
+                  "Year": 2010,
+                  "Race ID": 6,
+                  "Race": "Two or More Races",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 1384
+                },
+                {
+                  "Year": 2011,
+                  "Race ID": 0,
+                  "Race": "White Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 370468
+                },
+                {
+                  "Year": 2011,
+                  "Race ID": 0,
+                  "Race": "White Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 10914
+                },
+                {
+                  "Year": 2011,
+                  "Race ID": 1,
+                  "Race": "Black or African American Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 47749
+                },
+                {
+                  "Year": 2011,
+                  "Race ID": 1,
+                  "Race": "Black or African American Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 1458
+                },
+                {
+                  "Year": 2011,
+                  "Race ID": 2,
+                  "Race": "American Indian & Alaska Native Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 3160
+                },
+                {
+                  "Year": 2011,
+                  "Race ID": 2,
+                  "Race": "American Indian & Alaska Native Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 235
+                },
+                {
+                  "Year": 2011,
+                  "Race ID": 3,
+                  "Race": "Asian Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 14472
+                },
+                {
+                  "Year": 2011,
+                  "Race ID": 3,
+                  "Race": "Asian Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 61
+                },
+                {
+                  "Year": 2011,
+                  "Race ID": 4,
+                  "Race": "Native Hawaiian & Other Pacific Islander Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 45
+                },
+                {
+                  "Year": 2011,
+                  "Race ID": 4,
+                  "Race": "Native Hawaiian & Other Pacific Islander Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 177
+                },
+                {
+                  "Year": 2011,
+                  "Race ID": 5,
+                  "Race": "Some Other Race Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 529
+                },
+                {
+                  "Year": 2011,
+                  "Race ID": 5,
+                  "Race": "Some Other Race Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 3952
+                },
+                {
+                  "Year": 2011,
+                  "Race ID": 6,
+                  "Race": "Two or More Races",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 10350
+                },
+                {
+                  "Year": 2011,
+                  "Race ID": 6,
+                  "Race": "Two or More Races",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 1351
+                },
+                {
+                  "Year": 2012,
+                  "Race ID": 0,
+                  "Race": "White Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 369541
+                },
+                {
+                  "Year": 2012,
+                  "Race ID": 0,
+                  "Race": "White Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 11059
+                },
+                {
+                  "Year": 2012,
+                  "Race ID": 1,
+                  "Race": "Black or African American Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 48852
+                },
+                {
+                  "Year": 2012,
+                  "Race ID": 1,
+                  "Race": "Black or African American Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 1647
+                },
+                {
+                  "Year": 2012,
+                  "Race ID": 2,
+                  "Race": "American Indian & Alaska Native Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 3322
+                },
+                {
+                  "Year": 2012,
+                  "Race ID": 2,
+                  "Race": "American Indian & Alaska Native Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 235
+                },
+                {
+                  "Year": 2012,
+                  "Race ID": 3,
+                  "Race": "Asian Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 14662
+                },
+                {
+                  "Year": 2012,
+                  "Race ID": 3,
+                  "Race": "Asian Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 40
+                },
+                {
+                  "Year": 2012,
+                  "Race ID": 4,
+                  "Race": "Native Hawaiian & Other Pacific Islander Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 50
+                },
+                {
+                  "Year": 2012,
+                  "Race ID": 4,
+                  "Race": "Native Hawaiian & Other Pacific Islander Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 0
+                },
+                {
+                  "Year": 2012,
+                  "Race ID": 5,
+                  "Race": "Some Other Race Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 584
+                },
+                {
+                  "Year": 2012,
+                  "Race ID": 5,
+                  "Race": "Some Other Race Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 3980
+                },
+                {
+                  "Year": 2012,
+                  "Race ID": 6,
+                  "Race": "Two or More Races",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 10289
+                },
+                {
+                  "Year": 2012,
+                  "Race ID": 6,
+                  "Race": "Two or More Races",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 1918
+                },
+                {
+                  "Year": 2013,
+                  "Race ID": 0,
+                  "Race": "White Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 368313
+                },
+                {
+                  "Year": 2013,
+                  "Race ID": 0,
+                  "Race": "White Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 11038
+                },
+                {
+                  "Year": 2013,
+                  "Race ID": 1,
+                  "Race": "Black or African American Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 48994
+                },
+                {
+                  "Year": 2013,
+                  "Race ID": 1,
+                  "Race": "Black or African American Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 1835
+                },
+                {
+                  "Year": 2013,
+                  "Race ID": 2,
+                  "Race": "American Indian & Alaska Native Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 3001
+                },
+                {
+                  "Year": 2013,
+                  "Race ID": 2,
+                  "Race": "American Indian & Alaska Native Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 407
+                },
+                {
+                  "Year": 2013,
+                  "Race ID": 3,
+                  "Race": "Asian Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 15248
+                },
+                {
+                  "Year": 2013,
+                  "Race ID": 3,
+                  "Race": "Asian Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 55
+                },
+                {
+                  "Year": 2013,
+                  "Race ID": 4,
+                  "Race": "Native Hawaiian & Other Pacific Islander Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 97
+                },
+                {
+                  "Year": 2013,
+                  "Race ID": 4,
+                  "Race": "Native Hawaiian & Other Pacific Islander Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 0
+                },
+                {
+                  "Year": 2013,
+                  "Race ID": 5,
+                  "Race": "Some Other Race Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 708
+                },
+                {
+                  "Year": 2013,
+                  "Race ID": 5,
+                  "Race": "Some Other Race Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 4147
+                },
+                {
+                  "Year": 2013,
+                  "Race ID": 6,
+                  "Race": "Two or More Races",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 11211
+                },
+                {
+                  "Year": 2013,
+                  "Race ID": 6,
+                  "Race": "Two or More Races",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 2148
+                },
+                {
+                  "Year": 2014,
+                  "Race ID": 0,
+                  "Race": "White Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 366731
+                },
+                {
+                  "Year": 2014,
+                  "Race ID": 0,
+                  "Race": "White Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 10756
+                },
+                {
+                  "Year": 2014,
+                  "Race ID": 1,
+                  "Race": "Black or African American Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 49849
+                },
+                {
+                  "Year": 2014,
+                  "Race ID": 1,
+                  "Race": "Black or African American Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 1774
+                },
+                {
+                  "Year": 2014,
+                  "Race ID": 2,
+                  "Race": "American Indian & Alaska Native Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 2866
+                },
+                {
+                  "Year": 2014,
+                  "Race ID": 2,
+                  "Race": "American Indian & Alaska Native Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 387
+                },
+                {
+                  "Year": 2014,
+                  "Race ID": 3,
+                  "Race": "Asian Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 16102
+                },
+                {
+                  "Year": 2014,
+                  "Race ID": 3,
+                  "Race": "Asian Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 83
+                },
+                {
+                  "Year": 2014,
+                  "Race ID": 4,
+                  "Race": "Native Hawaiian & Other Pacific Islander Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 72
+                },
+                {
+                  "Year": 2014,
+                  "Race ID": 4,
+                  "Race": "Native Hawaiian & Other Pacific Islander Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 0
+                },
+                {
+                  "Year": 2014,
+                  "Race ID": 5,
+                  "Race": "Some Other Race Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 704
+                },
+                {
+                  "Year": 2014,
+                  "Race ID": 5,
+                  "Race": "Some Other Race Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 4599
+                },
+                {
+                  "Year": 2014,
+                  "Race ID": 6,
+                  "Race": "Two or More Races",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 11241
+                },
+                {
+                  "Year": 2014,
+                  "Race ID": 6,
+                  "Race": "Two or More Races",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 2682
+                },
+                {
+                  "Year": 2015,
+                  "Race ID": 0,
+                  "Race": "White Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 364572
+                },
+                {
+                  "Year": 2015,
+                  "Race ID": 0,
+                  "Race": "White Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 11852
+                },
+                {
+                  "Year": 2015,
+                  "Race ID": 1,
+                  "Race": "Black or African American Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 49806
+                },
+                {
+                  "Year": 2015,
+                  "Race ID": 1,
+                  "Race": "Black or African American Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 2007
+                },
+                {
+                  "Year": 2015,
+                  "Race ID": 2,
+                  "Race": "American Indian & Alaska Native Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 2794
+                },
+                {
+                  "Year": 2015,
+                  "Race ID": 2,
+                  "Race": "American Indian & Alaska Native Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 281
+                },
+                {
+                  "Year": 2015,
+                  "Race ID": 3,
+                  "Race": "Asian Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 16590
+                },
+                {
+                  "Year": 2015,
+                  "Race ID": 3,
+                  "Race": "Asian Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 65
+                },
+                {
+                  "Year": 2015,
+                  "Race ID": 4,
+                  "Race": "Native Hawaiian & Other Pacific Islander Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 108
+                },
+                {
+                  "Year": 2015,
+                  "Race ID": 4,
+                  "Race": "Native Hawaiian & Other Pacific Islander Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 9
+                },
+                {
+                  "Year": 2015,
+                  "Race ID": 5,
+                  "Race": "Some Other Race Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 873
+                },
+                {
+                  "Year": 2015,
+                  "Race ID": 5,
+                  "Race": "Some Other Race Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 4088
+                },
+                {
+                  "Year": 2015,
+                  "Race ID": 6,
+                  "Race": "Two or More Races",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 12473
+                },
+                {
+                  "Year": 2015,
+                  "Race ID": 6,
+                  "Race": "Two or More Races",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 2786
+                },
+                {
+                  "Year": 2016,
+                  "Race ID": 0,
+                  "Race": "White Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 363214
+                },
+                {
+                  "Year": 2016,
+                  "Race ID": 0,
+                  "Race": "White Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 11919
+                },
+                {
+                  "Year": 2016,
+                  "Race ID": 1,
+                  "Race": "Black or African American Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 49860
+                },
+                {
+                  "Year": 2016,
+                  "Race ID": 1,
+                  "Race": "Black or African American Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 2141
+                },
+                {
+                  "Year": 2016,
+                  "Race ID": 2,
+                  "Race": "American Indian & Alaska Native Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 2513
+                },
+                {
+                  "Year": 2016,
+                  "Race ID": 2,
+                  "Race": "American Indian & Alaska Native Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 160
+                },
+                {
+                  "Year": 2016,
+                  "Race ID": 3,
+                  "Race": "Asian Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 17062
+                },
+                {
+                  "Year": 2016,
+                  "Race ID": 3,
+                  "Race": "Asian Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 58
+                },
+                {
+                  "Year": 2016,
+                  "Race ID": 4,
+                  "Race": "Native Hawaiian & Other Pacific Islander Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 132
+                },
+                {
+                  "Year": 2016,
+                  "Race ID": 4,
+                  "Race": "Native Hawaiian & Other Pacific Islander Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 7
+                },
+                {
+                  "Year": 2016,
+                  "Race ID": 5,
+                  "Race": "Some Other Race Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 952
+                },
+                {
+                  "Year": 2016,
+                  "Race ID": 5,
+                  "Race": "Some Other Race Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 4223
+                },
+                {
+                  "Year": 2016,
+                  "Race ID": 6,
+                  "Race": "Two or More Races",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 12966
+                },
+                {
+                  "Year": 2016,
+                  "Race ID": 6,
+                  "Race": "Two or More Races",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 2843
+                },
+                {
+                  "Year": 2017,
+                  "Race ID": 0,
+                  "Race": "White Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 360803
+                },
+                {
+                  "Year": 2017,
+                  "Race ID": 0,
+                  "Race": "White Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 12671
+                },
+                {
+                  "Year": 2017,
+                  "Race ID": 1,
+                  "Race": "Black or African American Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 50207
+                },
+                {
+                  "Year": 2017,
+                  "Race ID": 1,
+                  "Race": "Black or African American Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 2286
+                },
+                {
+                  "Year": 2017,
+                  "Race ID": 2,
+                  "Race": "American Indian & Alaska Native Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 2259
+                },
+                {
+                  "Year": 2017,
+                  "Race ID": 2,
+                  "Race": "American Indian & Alaska Native Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 244
+                },
+                {
+                  "Year": 2017,
+                  "Race ID": 3,
+                  "Race": "Asian Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 18072
+                },
+                {
+                  "Year": 2017,
+                  "Race ID": 3,
+                  "Race": "Asian Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 40
+                },
+                {
+                  "Year": 2017,
+                  "Race ID": 4,
+                  "Race": "Native Hawaiian & Other Pacific Islander Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 97
+                },
+                {
+                  "Year": 2017,
+                  "Race ID": 4,
+                  "Race": "Native Hawaiian & Other Pacific Islander Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 7
+                },
+                {
+                  "Year": 2017,
+                  "Race ID": 5,
+                  "Race": "Some Other Race Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 990
+                },
+                {
+                  "Year": 2017,
+                  "Race ID": 5,
+                  "Race": "Some Other Race Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 3905
+                },
+                {
+                  "Year": 2017,
+                  "Race ID": 6,
+                  "Race": "Two or More Races",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 13428
+                },
+                {
+                  "Year": 2017,
+                  "Race ID": 6,
+                  "Race": "Two or More Races",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 2660
+                },
+                {
+                  "Year": 2018,
+                  "Race ID": 0,
+                  "Race": "White Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 357879
+                },
+                {
+                  "Year": 2018,
+                  "Race ID": 0,
+                  "Race": "White Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 13097
+                },
+                {
+                  "Year": 2018,
+                  "Race ID": 1,
+                  "Race": "Black or African American Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 50528
+                },
+                {
+                  "Year": 2018,
+                  "Race ID": 1,
+                  "Race": "Black or African American Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 2360
+                },
+                {
+                  "Year": 2018,
+                  "Race ID": 2,
+                  "Race": "American Indian & Alaska Native Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 2274
+                },
+                {
+                  "Year": 2018,
+                  "Race ID": 2,
+                  "Race": "American Indian & Alaska Native Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 115
+                },
+                {
+                  "Year": 2018,
+                  "Race ID": 3,
+                  "Race": "Asian Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 17080
+                },
+                {
+                  "Year": 2018,
+                  "Race ID": 3,
+                  "Race": "Asian Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 50
+                },
+                {
+                  "Year": 2018,
+                  "Race ID": 4,
+                  "Race": "Native Hawaiian & Other Pacific Islander Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 105
+                },
+                {
+                  "Year": 2018,
+                  "Race ID": 4,
+                  "Race": "Native Hawaiian & Other Pacific Islander Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 11
+                },
+                {
+                  "Year": 2018,
+                  "Race ID": 5,
+                  "Race": "Some Other Race Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 810
+                },
+                {
+                  "Year": 2018,
+                  "Race ID": 5,
+                  "Race": "Some Other Race Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 3955
+                },
+                {
+                  "Year": 2018,
+                  "Race ID": 6,
+                  "Race": "Two or More Races",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 13308
+                },
+                {
+                  "Year": 2018,
+                  "Race ID": 6,
+                  "Race": "Two or More Races",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 2670
+                },
+                {
+                  "Year": 2019,
+                  "Race ID": 0,
+                  "Race": "White Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 355699
+                },
+                {
+                  "Year": 2019,
+                  "Race ID": 0,
+                  "Race": "White Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 12629
+                },
+                {
+                  "Year": 2019,
+                  "Race ID": 1,
+                  "Race": "Black or African American Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 50189
+                },
+                {
+                  "Year": 2019,
+                  "Race ID": 1,
+                  "Race": "Black or African American Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 2723
+                },
+                {
+                  "Year": 2019,
+                  "Race ID": 2,
+                  "Race": "American Indian & Alaska Native Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 2290
+                },
+                {
+                  "Year": 2019,
+                  "Race ID": 2,
+                  "Race": "American Indian & Alaska Native Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 278
+                },
+                {
+                  "Year": 2019,
+                  "Race ID": 3,
+                  "Race": "Asian Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 17003
+                },
+                {
+                  "Year": 2019,
+                  "Race ID": 3,
+                  "Race": "Asian Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 38
+                },
+                {
+                  "Year": 2019,
+                  "Race ID": 4,
+                  "Race": "Native Hawaiian & Other Pacific Islander Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 95
+                },
+                {
+                  "Year": 2019,
+                  "Race ID": 4,
+                  "Race": "Native Hawaiian & Other Pacific Islander Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 67
+                },
+                {
+                  "Year": 2019,
+                  "Race ID": 5,
+                  "Race": "Some Other Race Alone",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 819
+                },
+                {
+                  "Year": 2019,
+                  "Race ID": 5,
+                  "Race": "Some Other Race Alone",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 4171
+                },
+                {
+                  "Year": 2019,
+                  "Race ID": 6,
+                  "Race": "Two or More Races",
+                  "Ethnicity ID": 0,
+                  "Ethnicity": "Not Hispanic or Latino",
+                  "Population": 14043
+                },
+                {
+                  "Year": 2019,
+                  "Race ID": 6,
+                  "Race": "Two or More Races",
+                  "Ethnicity ID": 1,
+                  "Ethnicity": "Hispanic or Latino",
+                  "Population": 2828
+                }
+              ]

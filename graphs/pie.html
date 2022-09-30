@@ -1,0 +1,51 @@
+<html>
+<!doctype html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>Pie Chart Tooltip | D3plus</title>
+
+   <script src="js/d3plus@2.js"></script>
+    <style>
+
+     #viz{margin:0 20px 0 0;
+	  height: 100%;
+            overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+<div id='viz'></div>
+    <script>
+//Number:食品店数量
+      var myData = [
+        {"Group": "Store", "Sub-Group": "Convenience Store", "Number": 100},
+        {"Group": "Store", "Sub-Group": "Grocery Store", "Number": 150},
+        {"Group": "Store", "Sub-Group": "Farmer's Market", "Number": 50},
+        {"Group": "Store", "Sub-Group": "Supercenters", "Number": 30},
+        {"Group": "Restaurant", "Sub-Group": "Fast-Food Restaurant", "Number": 60},
+        {"Group": "Restaurant", "Sub-Group": "Full-Service Restaurant", "Number": 120}
+      ];
+
+      new d3plus.Pie()
+        .config({
+          data: myData,
+		  select: '#viz',
+          groupBy: ["Group", "Sub-Group"],
+          value: "Number",
+          tooltipConfig: {
+            tbody: [
+              ["Total", function(d) { return d["Number"] }]
+            ]
+          },
+		  legend:true
+        })
+        .render();
+
+    </script>
+
+  </body>
+
+</html>

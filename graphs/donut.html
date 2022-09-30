@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>条形图</title>
+    <script src="js/d3plus@2.js"></script>
+	<script src="data/bar.js"></script>
+    <style>
+       #viz{margin:0 0 0 0;
+	  height: 100%;
+            overflow: hidden;
+			
+      }
+    </style>
+	<div id="viz" class="mr-1">
+  
+  </head>
+  <body>
+    <script>
+      new d3plus.Donut()
+        .config({
+         data:myData,
+         groupBy: "name",
+         value: "pop",
+		  select: "#viz",
+	     padAngle:0.02,
+	     dataCutoff: 10,
+	    legend: true	
+        }).tooltipConfig({
+            tbody: [
+              ["数量", function(d) { return d["pop"] }]
+            ]
+          })
+       .render();
+    </script>
+  </body>
+</html>
+

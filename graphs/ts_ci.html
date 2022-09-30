@@ -1,0 +1,55 @@
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>Bar Chart Axis and Grid Styling | D3plus</title>
+
+     <script src="js/d3plus@2.js"></script>
+    <style>
+
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <script>
+
+        var data = [
+        {fruit: "apple", year: 2001, amount:  50, moe: 2},
+        {fruit: "apple", year: 2002, amount: 56, moe: 1},
+        {fruit: "apple", year: 2003, amount: 58, moe: 1},
+        {fruit: "banana", year: 2001, amount: 88, moe: 3},
+        {fruit: "banana", year: 2002, amount:  90, moe: 4},
+        {fruit: "banana", year: 2003, amount: 76, moe: 3}
+      ];
+
+      new d3plus.LinePlot()
+        .data(data)
+        .groupBy("fruit")
+        .x("year")
+        .y("amount")
+        .confidence([
+          function(d) {
+            return d.amount - d.moe
+          },
+          function(d) {
+            return d.amount + d.moe
+          },
+        ])
+        .confidenceConfig({
+          fillOpacity: 0.3
+        })
+        .render();
+
+    </script>
+
+  </body>
+
+</html>

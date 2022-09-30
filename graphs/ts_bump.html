@@ -1,0 +1,52 @@
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>Bar Chart Axis and Grid Styling | D3plus</title>
+
+   <script src="js/d3plus@2.js"></script>
+
+    <style>
+
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <script>
+
+     var data = [
+        {fruit: "apple", year: 1, rank:  1},
+        {fruit: "apple",  year: 2, rank: 2},
+        {fruit: "apple",  year: 3, rank: 1},
+        {fruit: "banana", year: 1, rank: 2},
+        {fruit: "banana", year: 2, rank:  4},
+        {fruit: "banana",  year: 3, rank: 3},
+        {fruit: "cherry",  year: 1, rank:  4},
+        {fruit: "cherry",  year: 2, rank: 3},
+        {fruit: "cherry",  year: 3, rank: 2},
+        {fruit: "orange",  year: 1, rank: 3},
+        {fruit: "orange",  year: 2, rank:  1},
+        {fruit: "orange",  year: 3, rank: 4}
+      ];
+
+      new d3plus.BumpChart()
+        .data(data)
+        .groupBy("fruit")
+        .x("year")
+        .y("rank")
+        .render();
+
+
+    </script>
+
+  </body>
+
+</html>

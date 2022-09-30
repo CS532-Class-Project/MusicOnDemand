@@ -1,0 +1,44 @@
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>Bar Chart Axis and Grid Styling | D3plus</title>
+
+    <script src="js/d3plus@2.js"></script>
+ <script src="data/fruit.json"></script>
+    <style>
+
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <script>
+
+  
+      new d3plus.LinePlot()
+        .config({
+          data: myData,
+          groupBy: "id",
+          lineMarkers: true,
+          lineMarkerConfig: {
+            r: 6
+          },
+          x: "x",
+          y: "y"
+        })
+        .render();
+
+
+    </script>
+
+  </body>
+
+</html>

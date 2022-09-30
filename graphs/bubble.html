@@ -1,0 +1,58 @@
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+<!-- Load d3.js -->
+ 
+<script src="data/4_ThreeNum.js"></script>
+
+<script src="js/d3.v4.js"></script>
+   <script src="js/d3plus-plot.v0.9.full.min.js"></script>
+
+    <style>
+
+    #viz{margin:0 0 0 0;
+	  height: 100%;
+            overflow: hidden;
+      }
+  </style>
+
+  </head>
+  
+  <body>
+<div id="viz"></div>
+
+<script>
+
+// Read the data and compute summary statistics for each specie
+
+ var chart = new d3plus.Plot()
+  .data(data)
+   .select("#viz")
+   .groupBy(["continent","country"])
+    .shape(function(d) {return "Circle"; })
+   .legend(false)
+   .xConfig({
+      title: "年收入/美元",
+      titleConfig: {
+        fontColor: "green"  
+      },
+    })
+    .yConfig({
+      title: "期望寿命",
+      titleConfig: {
+        fontColor: "green"
+      }
+    });
+	 chart.size("pop")
+           .x("gdpPercap")
+           .y("lifeExp")
+           .sizeMax(30)
+ .render();
+ 
+</script>
+</body>
+ 
+
+</html>
