@@ -32,6 +32,32 @@ const onUserNameSubmit = (sock) => (e) => {
   sock.emit('username', text);
 }
 
+const onLoginBtn = (sock) => (e) => {
+  // retrieve the user information from the database
+  e.preventDefault();
+
+  const parent = document.querySelector('#loginDisplay');
+  const el = document.createElement('li');
+  el.innerHTML = "Pressed the login button";
+
+  parent.appendChild(el);
+}
+
+const onCreateAccount = (sock) => (e) => {
+  // need to add new account to the database
+  e.preventDefault();
+
+  const parent = document.querySelector('#createDisplay');
+  const el = document.createElement('li');
+  
+  let text = "Creating a new user";
+  el.innerHTML = text;
+
+  text = ' ';
+
+  parent.appendChild(el);
+}
+
 const onChatSubmitted = (sock) => (e) => {
   e.preventDefault();
 
@@ -54,7 +80,15 @@ const onChatSubmitted = (sock) => (e) => {
     .querySelector('#chat-form')
     .addEventListener('submit', onChatSubmitted(sock));
 
+    // document
+    // .querySelector('#uname-form')
+    // .addEventListener('submit', onUserNameSubmit(sock));
+
     document
-    .querySelector('#uname-form')
-    .addEventListener('submit', onUserNameSubmit(sock));
+    .querySelector('#loginBtn')
+    .addEventListener('click', onLoginBtn(sock));
+
+    document
+    .querySelector('#createAcctBtn')
+    .addEventListener('click', onCreateAccount(sock));
   })();

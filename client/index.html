@@ -9,27 +9,27 @@
 
     <body>
         <h1>Music on Demand</h1>
+        <h3>Register to create an account or login if you already have an account</h3>
         
-        <div class="container">
-            <div class="username">
-                <h2 id="logintitle">Log in please</h2><br>
-                <form id="uname-form">
-                    <label for="uname">User Name  </label>
-                    <input type="text" id="uname" name="uname"/>
-                    <input type="submit" value="Submit">
-                </form>
-            </div>
+        <div class="account">
+                <button id="loginBtn">Login</button>
+                <label for="loginBtn">Already have an account?</label>
 
-            <h3 id="displayUName"></h3>
-            <div class="chat-wrapper">
-                <form id="chat-form">
-                    <label for="chat">Chat  </label>
-                    <input id="chat" autocomplete="off" title="chat"/>
-                    <button id="SendChat">Send</button>
-                </form>
-            </div>
-            <ul id="events"></ul>
+                <button id="createAcctBtn">Create Account</button>
+                <label for="createAcctBtn">Don't have an account?</label>
         </div>
+        <ul id="loginDisplay"></ul>
+        <ul id="createDisplay"></ul>
+
+        <h3 id="displayUName"></h3>
+        <div class="chat-wrapper">
+            <form id="chat-form">
+                <label for="chat">Chat</label>
+                <input id="chat" autocomplete="off" title="chat"/>
+                <button id="SendChat">Send</button>
+            </form>
+        </div>
+        <ul id="events"></ul>
 
         <script src="/socket.io/socket.io.js"></script>
         <script src="src/client.js"></script>

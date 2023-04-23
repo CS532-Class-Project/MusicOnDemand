@@ -3,6 +3,10 @@ body {
     text-align: center;
 }
 
+ul #loginDisplay {
+  font-family: 'Courier New', Courier, monospace;
+}
+
 ul {
     font-family: Arial, Helvetica, sans-serif;
     background-color: whitesmoke;
@@ -41,4 +45,8 @@ ul {
       
       .chat-wrapper form button {
         width: 80px;
+      }
+
+      .account {
+        align-items: start;
       }
