@@ -4,7 +4,7 @@
 const http               = require('http');
 const express            = require('express');
 const socketio           = require('socket.io');
-const port               = 3000;
+const port               = 2800;
 
 const app = express();
 const clientPath = `${__dirname}/../client`;

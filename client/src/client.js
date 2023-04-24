@@ -80,10 +80,6 @@ const onChatSubmitted = (sock) => (e) => {
     .querySelector('#chat-form')
     .addEventListener('submit', onChatSubmitted(sock));
 
-    // document
-    // .querySelector('#uname-form')
-    // .addEventListener('submit', onUserNameSubmit(sock));
-
     document
     .querySelector('#loginBtn')
     .addEventListener('click', onLoginBtn(sock));
