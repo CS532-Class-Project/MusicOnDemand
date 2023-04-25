@@ -65,7 +65,7 @@ app.all("/logout", function(req, res) {
     if (err) { return next(err); }
     res.redirect('/');
   });
-  res.redirect('/');
+  // res.redirect('/');
 });
 
 app.get("/", function(req, res) {
