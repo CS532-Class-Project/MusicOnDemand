@@ -1,0 +1,92 @@
+<html>
+<style>
+ #nav{
+	
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0000aa;
+}
+
+li {
+  float: left;
+
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #AAAAFF;
+}
+    #nav ul {
+            position: absolute;
+            padding: 0;
+            left: 0;
+            display: none;
+		
+        }
+
+    
+      
+    #nav li:hover #courses {
+  display: block;
+  background-color: #AAAAFF;
+  /* shows sub-sublist on hover */
+  margin-left: 4%;
+  width: 160px;
+   text-align: left;
+     }
+    #nav li:hover #projects {
+  display: block;
+  background-color: #AAAAFF;
+  /* shows sub-sublist on hover */
+  margin-left: 18%;
+  width: 150px;
+   text-align: left;
+     }	 
+	 </style>
+  <body>
+  <header>
+	<h1 style="text-align:center">Virtual Music Center</h1>
+    <ul id="nav">
+        <li style="margin-left:5%;"><a href="#">Home</a></li>
+        <li class="vertical-menu"><a href="#courses">Musics</a>
+           <ul id="courses">
+                <li><a href="indexpython.html">Pop music</a></li>
+                <li><a href="tools/index.html">Hip hop</a></li>
+				<li><a href="tools/index.html">Rock music</a></li>
+				 <li><a href="indexpython.html">Rhythm</a></li>
+                <li><a href="tools/index.html">Soul music</a></li>
+				<li><a href="tools/index.html">Country</a></li>
+                         </ul>     </li>
+        <li class="vertical-menu"><a href="#projects">Recommendations</a>
+           <ul id="projects">
+                <li><a href="projectDV.html">By popularity</a></li>
+               <li><a href="tools/index.html">By profile</a></li>
+           </ul></li>
+		  <li><a href="./party.html">Music Party</a></li>
+		  
+<li style="float:right; margin-right: 2%; "><a href="./logout">Logout</a></li>
+        <li style="float:right; margin-right: 2%; ">
+		<% if(user == undefined) {%><a href="./login.html">Login</a></li>
+      <li style="float:right; margin-right: 2%; "> <a href="./register.html">Register</a></li> <% } else { %>
+            <% if(user.username != undefined) { %>
+        Welcome to <%=user.username %>
+     <% } %><% } %>
+	 </ul>
+  </header> 
+    
+     
+     
+      
+    
+  </body>
+</html>
