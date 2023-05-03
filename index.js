@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const config = require('./config');
 const util = require('util');
+const bodyParser = require('body-parser');
 
 var app = express();
 const port = 3000;
@@ -101,6 +102,12 @@ app.post("/login",
 );
 
 
+// Import Routes
+const musicRoute = require('./routes/musics');
+
+// Middlewares
+app.use(bodyParser.json());  // run body parser before every route
+app.use('/musics', musicRoute);
 
 app.listen(port, function() {
   console.log("App listening on port " + port + " !");
