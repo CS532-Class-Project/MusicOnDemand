@@ -1,0 +1,16 @@
+<html>
+<head>
+
+</head>
+<body>
+<h1>SuperMarket's Sales: </h1>
+
+<ul>
+    <% for(fruit of fruits) { %>
+        <li>
+            <%= fruit.name + ": Price," + fruit.price + ", amount" + fruit.amount + "lbs, on" + fruit.date %> 
+        </li>
+    <% } %>
+</ul>
+</body>
+</html>

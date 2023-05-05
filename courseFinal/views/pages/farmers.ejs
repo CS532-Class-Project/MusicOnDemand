@@ -1,0 +1,16 @@
+<html>
+<head>
+
+</head>
+<body>
+
+<h1>Farmer's Products: </h1>
+<ul>
+    <% for(farmer of farmers) { %>
+        <li>
+            <%= farmer.name + ": product," + farmer.product + ", amount" + farmer.amount + "lbs, on" + farmer.cropDate %> 
+        </li>
+    <% } %>
+</ul>
+</body>
+</html>

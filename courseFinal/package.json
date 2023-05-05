@@ -1,0 +1,27 @@
+{
+  "name": "authex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "ejs": "^3.0.2",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "flash": "^1.1.0",
+    "mongoose": "^6.2.7",
+    "mongoose-findorcreate": "^3.0.0",
+    "mongoose-unique-validator": "^2.0.3",
+    "opencv4nodejs-prebuilt-install": "^4.1.146",
+    "passport": "^0.4.1",
+    "passport-google-oauth": "^2.0.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "session-file-store": "^1.4.0"
+  }
+}

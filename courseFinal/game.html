@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		 
+		<title>my home</title>
+		<meta charset="utf-8">
+		<!--- Baokun Li, Mar 22, 2023. The interface is 
+		almost the same as in last project, but a chatbox
+        is added by copying the code example for the course.		
+		<link rel="stylesheet" media="screen and (min-width: 800px)" type="text/css" href="public/css/style1.css">
+       ---><script src="socket.io/socket.io.js"></script>
+
+<style>
+	 
+body {
+	font: 13px/19px  Arial, Helvetica, sans-serif;
+	color:#000000;
+	position:relative;
+	background-color: lightblue;
+}
+
+.grid-container {
+	width: 100%; 
+  
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto;
+  grid-gap: 10px;
+  padding: 1px;
+ background-color: lightblue;
+}
+.grid-container2 {
+	width: 100%;
+      margin-left: 1%; 
+  
+  display: grid;
+  grid-template-columns: 13% 60% 15%;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  padding: 1px;
+ background-color: lightblue;
+}
+.grid-container > div {
+  width: 100%;
+height: 60px;
+color:blue;
+margin-top: 2px;
+margin-bottom: 2px;
+-moz-border-radius: 12px;
+-webkit-border-radius: 12px;
+border-radius: 6px;
+-moz-box-shadow: 4px 4px 14px #000;
+-webkit-box-shadow: 4px 4px 14px #000;
+box-shadow:2px 4px 4px 2px #000;
+
+}
+.dotR {
+  height: 55px;
+  width: 95%;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+}
+.dotY {
+  height: 55px;
+  width: 95%;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
+  background-color: yellow;
+  border-radius: 50%;
+  display: inline-block;
+}
+header a:hover {
+	color: #000;
+}
+.footer {
+   position: fixed;
+   bottom: 0;
+   margin:0;
+   width: 96%;
+   background-color: #0000aa;
+  text-align: center;
+   display: flex;
+  justify-content: space-between;
+}
+      #chatForm input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages li { padding: 5px 10px; }
+      #messages li:nth-child(odd) { background: #eee; }     	   
+</style>			
+		
+</head>
+   
+<body>
+  <header>
+	<h1 style="text-align:center"> Connect 4, an easy game</h1>
+  
+  </header> 
+<div class="grid-container2">
+  <form id="settingForm" action="">
+<!---Setups for the connect 4 game-->  
+ <div class="column2">  <p>Please enter your name:</p>
+<input type="text" id="name" name="name">
+<input type="hidden" id="vars" value="">
+<input type="hidden" id="guestlist" value="">
+<input type="hidden" id="control" value="0">
+ <br>
+ <p>Please select room:</p>
+  <input type="radio" id="rm1" name="room" checked="true"></input>
+  <label ><FONT COLOR="black">room1</FONT></label><br>
+  <input type="radio" id="rm2" name="room"></input>
+  <label ><FONT COLOR="black">room2</FONT></label><br>
+  <input type="radio" id="rm3" name="room"></input>
+  <label ><FONT COLOR="black">room3</FONT></label><br>
+  <input type="radio" id="rm4" name="room"></input>
+  <label ><FONT COLOR="black">room4</FONT></label><br>
+  <input type="radio" id="rm5" name="room"></input>
+  <label ><FONT COLOR="black">room5</FONT></label><br>
+
+
+
+ 
+  <p>Please select color:</p>
+  <input type="radio" id="red" name="color" checked="true">
+  <label for="html"><FONT COLOR="#FF0000">red</FONT></label><br>
+  <input type="radio" id="yellow" name="color" value="yellow">
+  <label for="css"><FONT COLOR="yellow">yellow</FONT></label><br><br>
+ <button id="myBtn">Click to Play</button><button id="myBtn2" type="button" >Resume</button><br>
+</form>
+ </div> 
+ <form id="clickForm" action="">
+ <!---The cells are used to represent circles--> 
+<div class="grid-container"  class="column1" >
+
+<div id="c61" class="cell"></div>
+<div id="c62" class="cell"></div>
+<div id="c63" class="cell"></div>
+<div id="c64" class="cell"></div>
+<div id="c65" class="cell"></div>
+<div id="c66" class="cell"></div>
+<div id="c67" class="cell"></div>
+<div id="c51" class="cell"></div>
+<div id="c52" class="cell"></div>
+<div id="c53" class="cell"></div>
+<div id="c54" class="cell"></div>
+<div id="c55" class="cell"></div>
+<div id="c56" class="cell"></div>
+<div id="c57" class="cell"></div>
+<div id="c41" class="cell"></div>
+<div id="c42" class="cell"></div>
+<div id="c43" class="cell"></div>
+<div id="c44" class="cell"></div>
+<div id="c45" class="cell"></div>
+<div id="c46" class="cell"></div>
+<div id="c47" class="cell"></div>
+<div id="c31" class="cell"></div>
+<div id="c32" class="cell"></div>
+<div id="c33" class="cell"></div>
+<div id="c34" class="cell"></div>
+<div id="c35" class="cell"></div>
+<div id="c36" class="cell"></div>
+<div id="c37" class="cell"></div>
+<div id="c21" class="cell"></div>
+<div id="c22" class="cell"></div>
+<div id="c23" class="cell"></div>
+<div id="c24" class="cell"></div>
+<div id="c25" class="cell"></div>
+<div id="c26" class="cell"></div>
+<div id="c27" class="cell"></div>
+<div id="c11" class="cell"></div>
+<div id="c12" class="cell"></div>
+<div id="c13" class="cell"></div>
+<div id="c14" class="cell"></div>
+<div id="c15" class="cell"></div>
+<div id="c16" class="cell"></div>
+<div id="c17" class="cell"></div>
+
+ </div>
+ </form>
+ <div class="column3" > 
+ <p>List of players already in game.</p>
+ 
+      <ul id="messages" height="200px"></ul>
+    <form id="chatForm" action="">
+      <input id="m" autocomplete="off" /><button>Send</button>
+    </form>
+ </div> 
+</div>  
+</body>
+<script>
+<!---list[0] and list[1] are data generated by clicks from 2 plays
+--> 
+var list = new Array(2);
+
+  list[0]=[];
+  list[1]=[];
+ var Ct=0;
+ var newCt=0;
+ var roomNum=0;
+ /*
+ var player=0;
+ var start=0;
+ var winer=2;
+ var name="ff";
+ */
+
+  //checkList function tests whether one wins
+ function checkList(list,num){
+ var count=[0,0,0,0];
+ numCopy=num;
+ while (numCopy-10>10){
+  if (list.includes(numCopy-10)){
+  count[0]+=1;
+  numCopy=numCopy-10;
+  }else
+  {numCopy=0;}
+ }
+ numCopy=num;
+ 
+ while (numCopy-1>10){
+  if (list.includes(numCopy-1)){
+  count[1]+=1;
+  numCopy=numCopy-1;
+  }else
+  {numCopy=0;}
+ }
+ 
+ numCopy=num;
+ while (numCopy+1<100){
+  if (list.includes(numCopy+1)){
+  count[1]+=1;
+  numCopy=numCopy+1;
+  }else
+  {numCopy=101;}
+ }
+ numCopy=num;
+ while (numCopy+11<100){
+  if (list.includes(numCopy+11)){
+  count[2]+=1;
+  numCopy=numCopy+11;
+  }else
+  {numCopy=101;}
+ }
+ numCopy=num;
+ 
+ while (numCopy-11>-1){
+  if (list.includes(numCopy-11)){
+  count[2]+=1;
+  numCopy=numCopy-11;
+  }else
+  {numCopy=0;}
+ }
+ numCopy=num;
+ while (numCopy-9>0){
+  if (list.includes(numCopy-9)){
+  count[3]+=1;
+  numCopy=numCopy-9;
+  }else
+  {numCopy=0;}
+ }
+ numCopy=num;
+ while (numCopy+9<100){
+  if (list.includes(numCopy+9)){
+  count[3]+=1;
+  numCopy=numCopy+9;
+  }else
+  {numCopy=100;}
+ }
+ if (count[0]>2||count[1]>2||count[2]>2||count[3]>2){
+   return 1;
+  } else {return 0;}
+ 
+ }
+  
+ //clicked() function deals with click action on the browser,
+ //and emit the data to the server.
+ 
+    function clicked() {
+	
+    document.body.onclick = function(evt) {
+	newCt=Ct+1;
+	    var evt = window.event || evt; //window.event for IE
+        if (!evt.target) {
+            evt.target = evt.srcElement; //extend target property for IE
+        } 
+        var target = evt.target.id;
+		var getNum=parseInt(target.substr(1,2));
+		var player=0;
+		if (document.getElementById("red").checked){
+	         player=0;} 
+	    else {
+	         player=1;}
+	//retrive the click lists saved in "guestlist" and "vars"
+		var glist=document.getElementById("guestlist").value
+        list[1-player]=glist.split("#").map(Number);
+		var mylist=document.getElementById("vars").value
+        list[player]=mylist.split("#").map(Number);
+		if (list[0][0]==0 && list[0].length>0){list[0].shift();}
+		if (list[1][0]==0 && list[1].length>0){list[1].shift();}
+
+    //click is allowed at game beginning or after click of opponent.
+	
+	if ((target.substr(0,1)=='c') && 
+		((player==0 &&list[0][0]==0)||(player==1 &&list[1][0]==0)||
+		(player==1 && list[1].length<list[0].length)||(player==0 && list[1].length==list[0].length) )){
+		if (getNum-20<0 || list[0].includes(getNum-10) 
+		    || list[1].includes(getNum-10)){ 
+	//click is saved to "vars"
+			list[player].push(getNum);
+			if (mylist==""){mylist=getNum;} else
+				{mylist=mylist+"#"+getNum;}
+		    document.getElementById("vars").value=mylist;
+	//after click the red/yellow ball is added
+		 if (player==0){
+		   evt.target.innerHTML='<span class="dotR"></span>';
+		   winer=checkList(list[0],getNum);
+		   if (winer==1){
+		      alert("Player RED is the winner.");
+						  }
+		   } else {
+		   evt.target.innerHTML='<span class="dotY"></span>';
+		    winer=checkList(list[1],getNum);
+		   if (winer==1){
+		      alert("Player YELLOW is the winner.");}
+	       }
+		  
+		} 
+	    else {alert("wrong position");}
+		
+	//click info is summaried and emitted. 	
+      if (target.substr(0,1)=='c' && Ct!=newCt){
+	     var player=0;
+         var roomNum=0;
+         start=1;
+	     name=document.getElementById("name").value;
+	     if (document.getElementById("rm1").checked){roomNum=1;}
+	     if (document.getElementById("rm2").checked){roomNum=2;}
+       	if (document.getElementById("rm3").checked){roomNum=3;}
+	    if (document.getElementById("rm4").checked){roomNum=4;}
+	    if (document.getElementById("rm5").checked){roomNum=5;}
+        if (document.getElementById("red").checked){
+	         player=0;} 
+	    else {
+	         player=1;}
+	
+	    var varStr=roomNum+"#"+player+"#"+getNum;
+	   
+	    console.log(document.getElementById("vars").value);
+    	var socket = io();
+           socket.emit('action', varStr);		 	  
+	}}
+
+   }
+   }
+
+//myBtn2's click for resumming a new game  
+document.getElementById("myBtn2").addEventListener("click", resume);
+function resume(){
+document.location.reload();
+}
+  var socket = io();
+ 
+ 
+ window.onload = function() {
+    var list = new Array(2);
+     list[0] =[];
+     list[1]=[]; 
+    var Ct=0;
+    var newCt=0;
+/*
+    var player=0;
+    var start=0;
+    var winer=2;
+    var name="ff";
+    var roomNum=0;
+    var socket = io();
+*/
+	clicked();
+
+    //setting up room, playrole, and emit to the server 	    
+	var form1 = document.getElementById("settingForm");
+    form1.onsubmit = function(e) {
+	     e.preventDefault(); 
+		 name=document.getElementById("name").value;
+	     if (document.getElementById("rm1").checked){roomNum=1;}
+	     if (document.getElementById("rm2").checked){roomNum=2;}
+	     if (document.getElementById("rm3").checked){roomNum=3;}
+	     if (document.getElementById("rm4").checked){roomNum=4;}
+	     if (document.getElementById("rm5").checked){roomNum=5;}
+	
+         if (document.getElementById("red").checked){
+	          player=0;} 
+	     else {
+	          player=1;}
+         
+   		 socket.connect();
+         socket.emit('create', name+"#"+roomNum+"#"+player);
+       	}
+
+		
+		
+      var form = document.getElementById("chatForm");
+     
+      form.onsubmit = function(e) {
+        e.preventDefault(); // prevents page reloading
+        var messageInput = document.getElementById("m");
+        var name=document.getElementById("name").value;
+        //send chat message to the server
+        socket.emit('chat message', name+":"+messageInput.value);
+        
+        messageInput.value = "";
+        return false;
+      };
+	  
+	  //opponent click information comes through socket,
+	  //show the opponent click on the browser
+      socket.on('action', function(varStr){
+	    var myArray = varStr.split("#").map(Number);
+		console.log(varStr);
+	    if (!isNaN(myArray[2])){
+        var lstep=document.getElementById("vars").value;
+		var player=0;
+		var pos=10;
+		if (document.getElementById("red").checked){
+	          player=0;} 
+	     else {
+	          player=1;}
+		if (lstep=""){pos=0;list[0]=[]; list[1]=[];}else{
+		var ss=lstep.split("#");
+		lstep=ss.map(Number);
+		
+		 pos=lstep[2];}
+		 
+		//get the previous clicks from two players
+		
+		var glist=document.getElementById("guestlist").value
+        list[1-player]=glist.split("#").map(Number);
+		var mylist=document.getElementById("vars").value
+        list[player]=mylist.split("#").map(Number);
+		console.log(list[player].length+",,"+list[1-player].length);
+	    if (list[0][0]==0 && list[0].length>0){list[0].shift();}
+		if (list[1][0]==0 && list[1].length>0){list[1].shift();}
+	
+        //insert opponent click and save at "guestlist"
+		if (player!=myArray[1] && (!isNaN(myArray[2])) && ((player==1 && list[1].length==0)||
+		(player==1 && list[1].length<=list[0].length)||(player==0 && list[0].length>list[1].length) ) 
+		    ){
+			   getNum=myArray[2];
+		       if (getNum-20<0 || list[0].includes(getNum-10) 
+		         || list[1].includes(getNum-10)){
+				  list[1-player].push(getNum);
+				  if (glist==""){glist=glist+getNum;} else
+				     {glist=glist+"#"+getNum;}
+		//insert opponent click to list, then save the click;	 
+				  document.getElementById("guestlist").value=glist;
+			
+                  var doe=document.getElementById("c"+getNum);				 
+		          if (myArray[1]==0){
+		            doe.innerHTML='<span class="dotR"></span>';
+                    
+		            winer=checkList(list[0],getNum);
+		            if (winer==1){
+		                alert("Player RED is the winner.");
+					}
+		          } else {
+		            doe.innerHTML='<span class="dotY"></span>';
+                   
+		            winer=checkList(list[1],getNum);
+		            if (winer==1){
+		            alert("Player YELLOW is the winner.");}
+	                }
+		            
+		         }
+        }	
+        }
+     });
+     //show chat message emitted from the server
+      socket.on('chat message', function(msg){
+        var node = document.createElement("li");             
+        var textnode = document.createTextNode(msg);         
+        node.appendChild(textnode);
+        var ms=document.getElementById("messages");
+		if (ms.childElementCount>8){
+        ms.removeChild(ms.children[0]);}
+        ms.appendChild(node);
+      });
+	  
+    };  
+    	   
+		
+  </script>
+</html>

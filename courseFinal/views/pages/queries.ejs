@@ -1,0 +1,79 @@
+<html>
+    <head>
+	<style>
+body {
+	font: 13px/19px  Arial, Helvetica, sans-serif;
+	color:#000000;
+	position:relative;
+	background-color: lightblue;
+}
+
+.grid-container {
+	width: 100%; 
+  
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 10px;
+  padding: 1px;
+ background-color: lightblue;
+}
+
+.grid-container > div {
+  width: 100%;
+height: 100%;
+color:blue;
+margin-top: 2px;
+margin-bottom: 2px;
+-moz-border-radius: 12px;
+-webkit-border-radius: 12px;
+border-radius: 6px;
+-moz-box-shadow: 4px 4px 14px #000;
+-webkit-box-shadow: 4px 4px 14px #000;
+box-shadow:2px 4px 4px 2px #000;
+
+}
+</style>
+    </head>
+    <body>
+        <%- include("../partials/header") %>
+		
+<!---The cells are used to represent circles--> 
+<div class="grid-container"  class="column1" >
+		
+<div id="c61" class="cell"> <%- include("../pages/form") %>  </div>
+<div id="c62" class="cell">
+<h1>Fruits sold out at Wolmart: </h1>
+<ul>
+    <% for(fruit of fruits) { %>
+        <li>
+           <%= "Product name:" +fruit.product + ",Price:" + fruit.price + "$, Amount sold:" + fruit.amount + "lbs, on " + fruit.date %> 
+       </li>
+    <% } %>
+</ul></div>
+<div id="c63" class="cell">
+<h1>Farmers and their Products: </h1>
+<ul>
+    <% for(farmer of farmers) { %>
+        <li>
+            <%= "Farmer's name:" + farmer.name + ", Product name:" + farmer.product + ", Amount produced:" + farmer.amount + "lbs, on " + farmer.cropDate %> 
+        </li>
+    <% } %>
+</ul>
+</div>
+<div id="c64" class="cell">
+<br>
+<br>
+<a href="./farmersQuery">List all records of "peach" </a> <br>
+For each fruit, the corresponding farmer's info is populated.
+<a href="./salesPeach">Two linked Mongo collections </a> <br>
+
+</div>
+</div>
+        
+        <%- include("../partials/footer") %>
+    </body>
+	<script>
+   
+</script>
+</html>
