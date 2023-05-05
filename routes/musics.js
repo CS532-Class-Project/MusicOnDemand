@@ -12,6 +12,17 @@ router.get('/list', async (req, res) => {
     }
 });
 
+// Get number of musics
+router.get('/getNum', async (req, res) => {
+    try{
+        const musics = await Music.find();
+        const num = musics.length;
+        res.json({count_music: num});
+    }catch(err){
+        res.json({message: err});
+    }
+});
+
 // Query a music
 router.get('/:musicId', async (req, res) => {
     try{

@@ -104,10 +104,12 @@ app.post("/login",
 
 // Import Routes
 const musicRoute = require('./routes/musics');
+const userRoute = require('./routes/users');
 
 // Middlewares
 app.use(bodyParser.json());  // run body parser before every route
 app.use('/musics', musicRoute);
+app.use('/users', userRoute);
 
 app.listen(port, function() {
   console.log("App listening on port " + port + " !");
