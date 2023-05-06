@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Music = require('../models/Music')
+const Music = require('../models/music')
 
 // Get all the musics
 router.get('/list', async (req, res) => {
