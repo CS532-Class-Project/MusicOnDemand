@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>create</title>
+</head>
+<body>
+	<h2>create new entry</h2>
+	<form id="Form" onsubmit="submitData(event)">
+		<label for="name">name:</label>
+		<input type="text" id="name" name="name"><br><br>
+
+        <label for="area">area:</label>
+		<input type="text" id="area" name="area"><br><br>
+
+        <label for="author">author:</label>
+		<input type="text" id="author" name="author"><br><br>
+
+        <label for="style">style:</label>
+		<input type="text" id="style" name="style"><br><br>
+
+		<label for="year">year:</label>
+		<input type="number" id="year" name="year"><br><br>
+
+		<label for="link">link:</label>
+		<input type="text" id="link" name="link"><br><br>
+
+        <label for="img_href">img_href:</label>
+		<input type="text" id="img_href" name="img_href"><br><br>
+
+		<button type="submit" onclick="submitData(event)">Submit</button>
+	</form>
+	
+	<script>
+		function submitData(event) {
+			event.preventDefault();
+			const name = document.getElementById("name").value;
+            const area = document.getElementById("area").value;
+            const author = document.getElementById("author").value;
+            const style = document.getElementById("style").value;
+            const year = document.getElementById("year").value;
+      		const link = document.getElementById("link").value;
+      		const img_href = document.getElementById("img_href").value;
+
+			fetch("http://localhost:3000/res/create", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json"
+				},
+				body: JSON.stringify({
+                    name: name,
+                    area: area,
+                    author: author,
+                    style: style,
+                    year: year,
+                    link: link,
+                    img_href: img_href
+        		})
+			})
+			.then(response => response.json())
+      		.then(data => console.log(data))
+      		.catch(error => console.log(error));
+		}
+	</script>
+</body>
+</html>

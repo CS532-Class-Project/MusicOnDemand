@@ -105,11 +105,17 @@ app.post("/login",
 // Import Routes
 const musicRoute = require('./routes/musics');
 const userRoute = require('./routes/users');
+const resRoute = require('./routes/external_resources');
 
 // Middlewares
 app.use(bodyParser.json());  // run body parser before every route
 app.use('/musics', musicRoute);
 app.use('/users', userRoute);
+app.use('/res', resRoute);
+
+app.get('/createSampleEntry', (req, res) => {
+  res.sendFile(__dirname + '/public/create.html');
+});
 
 app.listen(port, function() {
   console.log("App listening on port " + port + " !");
