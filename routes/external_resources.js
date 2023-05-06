@@ -32,4 +32,14 @@ router.post('/create', async (req, res) => {
     }
 });
 
+// Query by id
+router.get('/:resId', async (req, res) => {
+    try{
+        const one_res = await Res.findById(req.params.resId);
+        res.json(one_res);
+    }catch(err){
+        res.json({message: err});
+    }
+});
+
 module.exports = router;
