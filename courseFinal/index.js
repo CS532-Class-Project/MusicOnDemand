@@ -9,14 +9,12 @@ var app = express();
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
 const port = 3000;
-var farmerModel = require("./models/farmer");
-var fruitModel = require("./models/fruit");
-
 //setup mongoose connection and user models
 mongoose.connect('mongodb://localhost:27017/test', {useNewUrlParser: true}).catch(error => console.log("Something went wrong: " + error));
 var User = require("./models/user");
-
+var usera={};
 app.set("view engine", "ejs");
+//app.set('views', path.join(__dirname, '/views'))
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
@@ -32,7 +30,7 @@ filenames.forEach((file) => {
     console.log("File:", file);
 });
 
-const maxSize = 1 * 1000 * 1000;
+const maxSize = 100 * 1000 * 1000;
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
   
@@ -49,7 +47,7 @@ var upload = multer({
     fileFilter: function (req, file, cb){
     
         // Set the filetypes, it is optional
-        var filetypes = /jpeg|jpg|png|pdf|doc|txt/;
+        var filetypes = /jpeg|jpg|png|pdf|doc|mp4|txt/;
         var mimetype = filetypes.test(file.mimetype);
   
         var extname = filetypes.test(path.extname(
@@ -66,41 +64,15 @@ var upload = multer({
 // mypic is the name of file attribute
 }).single("fileupload"); 
 
-setInterval(() => {
-  var filenamesA = fs.readdirSync(directory_name);
- 
-filenamesA.forEach((file) => {
-	if (!filenames.includes(file)){
-	app.get('/upload/'+file, function(req, res) {
-   res.sendFile(__dirname + '/upload/'+file);
-   });	
-   filenames=filenamesA;
-    console.log("File:", file);}
-});
-
-}, "5000");
-
-filenames.forEach((file) => {
-	app.get('/upload/'+file, function(req, res) {
-   res.sendFile(__dirname + '/upload/'+file);
-   });
-});
-
 
 app.post('/upload', (req, res) => {
     upload(req,res,function(err) {
   
         if(err) {
-  
-            // ERROR occurred (here it can be occurred due
-            // to uploading image of size greater than
-            // 1MB or uploading different file type)
-            res.send(err)
+          res.send(err)
         }
         else {
-  
-            // SUCCESS, image successfully uploaded
-            res.send("Success, Image uploaded!")
+          res.send("Success, Image uploaded!")
         }
     })
 });
@@ -183,13 +155,7 @@ app.all("/logout", function(req, res) {
   });
   res.redirect("/login.html");
 });
-//interface
-app.get("/", function(req, res) {
-  res.render("index.ejs", {user:req.user});
-});
-app.get("/dataAnalyst", function(req, res) {
-  res.render("dataAnalyst.ejs", {user:req.user});
-});
+
 // internet game
 app.get('/game', function(req, res){
    res.sendFile(__dirname + '/game.html');
@@ -233,72 +199,38 @@ app.post("/login",
 );
 
 //for mongodb operations
-app.get("/form", function(req, res){
-    res.render("pages/form");
+app.get("/input", function(req, res){
+    res.render("pages/input");
 });
-//farmers info and fruits info are shown together in index.ejs
-
- var farm={};
-	farmerModel.listAllfarmers().then(function(farmers){
-        farm=farmers;
-		//console.log(farm);
-    }).catch(function(error){ 
-        res.error("Something went wrong!" + error );
-    });
-		
-function readDB(){	
-var farmers =farm;
-
-app.get('/mongodb', function(req, res){
-  // res.render('pages/index');
- 	 
 	
-   fruitModel.listAllfruits().then(function(fruits){
-        res.render("pages/queries", {fruits:fruits,farmers:farmers});
+var musicModel = require("./models/music");
+
+
+//musics.ejs shows the sales info of farmers
+app.get("/musics", function(req,res) {
+    
+	musicModel.listAllMusics().then(function(musics){
+		console.log(musics);
+		res.header('Content-Security-Policy', "img-src 'self'");
+        res.render("pages/musics.ejs", {user:usera, musics:musics});
 		
     }).catch(function(error){ 
+	
         res.error("Something went wrong!" + error );
     });
+    
 });
-//"populate" function is used to show the fruit information 
-//can include the producer's profile
-app.get("/salesPeach", function(req,res) {
-fruitModel.find({ product: 'peach' })
-.populate("producedby")
-.then(fruits=>res.render("pages/salesPeach", {fruits:fruits}))
-.catch();    
-  });
 
-}
-setTimeout(readDB,1000);
- 
-
-//sales.ejs shows the sales info of fruits  
-app.get("/sales", function(req,res) {
-    fruitModel.listAllfruits().then(function(fruits){
-        res.render("pages/sales", {fruits:fruits});
-		
-    }).catch(function(error){ 
-        res.error("Something went wrong!" + error );
-    });
-    
-})
-//farmers.ejs shows the sales info of farmers
-app.get("/farmers", function(req,res) {
-    
-	farmerModel.listAllfarmers().then(function(farmers){
-        res.render("pages/farmers", {farmers:farmers});
-		
-    }).catch(function(error){ 
-        res.error("Something went wrong!" + error );
-    });
-    
-})
+//interface
+app.get("/", function(req, res) {
+	usera=req.user;
+  res.render("index.ejs", {user:req.user});
+});
 //show query from the farmers
-app.get("/farmersQuery", function(req,res) {
+app.get("/china", function(req,res) {
     
-	farmerModel.queryfarmers().then(function(farmers){
-        res.render("pages/farmersQuery", {farmers:farmers});
+	musicModel.queryMusics().then(function(musics){
+        res.render("pages/Ch_musics", {user:usera,musics:musics});
 		
     }).catch(function(error){ 
         res.error("Something went wrong!" + error );
@@ -306,50 +238,25 @@ app.get("/farmersQuery", function(req,res) {
     
 })
 //save fruit to test.fruits collection. 
-
-app.post('/fruit', function(req, res){
-	var prod={};
-	prod=req.body.fruit;
-	var prodStr;
-	prodStr=""+req.body.fruit.product;
-	//console.log(prodStr);
-	farmerModel.findOne({product:prodStr}, '_id', function(err, farmer) {
-  if (err) return handleError(err);
-  console.log(farmer._id);
-  console.log(prod);
-  prod["producedby"]=farmer._id;
-  console.log(prod);
-});
-
-
-function save2Fruit(){	//	req.body.fruit.productedby=prod[0]._id;		
-    console.log("fruit: " + JSON.stringify(prod));
-    var newfruit = new fruitModel(prod);
-    
-    newfruit.save().then(function(){
-        res.send("Added new fruits to database!");
-    }).catch(function(err){
-        res.err("Failed to add new fruit to database!");
-    });
-}
-setTimeout(save2Fruit,500);
+//save music to test.musics collection.
+var prod={};
+app.post('/music', function(req, res){
+	prod=req.body.music;
 	
-});
-
-//save farmer to test.farmers collection.
-app.post('/farmer', function(req, res){
-	
-    if(JSON.stringify(req.body).length>10){
-	
-    var newfarmer = new farmerModel(req.body);
-  
-    newfarmer.save().then(function(){
-		console.log("Added new farmers to database!");
-        res.send("Added new farmers to database!");
-    }).catch(function(err){
-        res.err("Failed to add new farmers to database!");
-    });	
+  function save(){	
+    if(JSON.stringify(prod).length>10){
+		var newmusic = new musicModel(prod);
+		
+		newmusic.save().then(function(){
+		console.log(req.body);
+        res.send("Added new musics to database!");
+        }).catch(function(err){
+        res.err("Failed to add new musics to database!");
+		});
 	}
+  }
+  setTimeout(save,1000);
+	
 });
 
 http.listen(port, function() {
