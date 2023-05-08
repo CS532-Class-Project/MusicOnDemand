@@ -1,0 +1,119 @@
+	
+
+/*styles of content pane*/	 
+body {
+	font: 13px/19px  Arial, Helvetica, sans-serif;
+	color:#666565;
+	position:relative;
+	min-width:900px;
+	background-color: lightblue;
+}
+/*mybody and hobby are used in indexhobby.html*/
+.mybody{
+	width: 90%;
+  
+    margin-left: 5%; 
+    margin-right: 5%;
+}
+.mybody>h1{
+  text-align: center;
+}
+.hobby >img {
+    width: 100%;
+    height: 100%;
+  }
+  
+/*grid-container is used for styles in main part of 
+indexpython.html*/
+
+.grid-container  {
+    width: 100%;
+    height:200px;
+ 
+    margin-right: 5%;
+
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto auto auto auto auto;
+    grid-gap: 10px;
+    padding: 1px;
+    background-color: lightblue;
+}
+.box {
+    width: 100%;
+    height:100px;
+	    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto   
+}
+  
+.grid-container > .box > .divL {
+ width: 1%;
+height: 200px;
+margin-left: 8px;
+margin-top: 2px;
+margin-bottom: 2px;
+-moz-border-radius: 12px;
+-webkit-border-radius: 12px;
+border-radius: 6px;
+-moz-box-shadow: 4px 4px 14px #000;
+-webkit-box-shadow: 4px 4px 14px #000;
+box-shadow:2px 4px 4px 2px #000;
+
+}
+.grid-container > .box > .divR {
+ width: 48%;
+height: 200px;
+margin-left: 8px;
+margin-top: 2px;
+margin-bottom: 2px;
+
+}
+
+/*grid-container2 is used for styles in main part of 
+projectDV.html*/
+
+.grid-container2 {
+	width: 100%;
+  
+    margin-left: 5%; 
+    margin-right: 5%;
+
+  display: grid;
+  grid-template-columns: 60% 35%;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  padding: 1px;
+
+}
+
+.grid-container2 > div >p{ 
+ /* align text in p;*/
+  margin-left: 3%;
+}
+
+.grid-container2 > div {
+  background-color: #EEEEFF;
+ /* text-align: center;*/
+  padding: 10px 0;
+  font-size: 15px;
+  color: blue;
+}
+
+
+/*special style of my photo*/
+#my img {
+     object-fit: contain;
+}
+
+/*style of footer*/
+.footer {
+   position: fixed;
+   bottom: 0;
+   margin:0;
+   width: 96%;
+   background-color: #0000aa;
+  text-align: center;
+   display: flex;
+  justify-content: space-between;
+}

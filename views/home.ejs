@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		 
+		<title>my home</title>
+		<meta charset="UTF-8">
+    <meta name="viewport" content=
+        "width=device-width, 
+        initial-scale=1.0">
+		<!--- Baokun Li, Mar 22, 2023. The interface is 
+		almost the same as in last project, but a chatbox
+        is added by copying the code example for the course.		
+		<link rel="stylesheet" media="screen and (min-width: 800px)" type="text/css" href="public/css/style1.css">
+       ---><script src="socket.io/socket.io.js"></script>
+
+<style>
+	 
+body {
+	font: 13px/19px  Arial, Helvetica, sans-serif;
+	color:#000000;
+	position:relative;
+	background-color: lightblue;
+}
+
+.grid-container {
+	width: 100%; 
+ height: 900x; 
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  padding: 1px;
+ background-color: lightblue;
+}
+.grid-container2 {
+	width: 100%;
+      margin-left: 1%; 
+  
+  display: grid;
+  grid-template-columns: 80% 18%;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  padding: 1px;
+ background-color: lightblue;
+}
+.grid-container > div {
+  width: 100%;
+height: 500px;
+color:blue;
+margin-top: 2px;
+margin-bottom: 2px;
+-moz-border-radius: 12px;
+-webkit-border-radius: 12px;
+border-radius: 6px;
+-moz-box-shadow: 4px 4px 14px #000;
+-webkit-box-shadow: 4px 4px 14px #000;
+box-shadow:2px 4px 4px 2px #000;
+
+}
+
+
+      #chatForm input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages li { padding: 5px 10px; }
+      #messages li:nth-child(odd) { background: #eee; }     	   
+</style>			
+		
+</head>
+   
+<body>
+  <header>
+	<h1 style="text-align:center">course helper</h1>
+  
+  </header> 
+<div class="grid-container2">
+
+ <div class="grid-container"  class="column1" >
+<div class="localVideo" >List of <%=data.name%> are:<br />
+ 
+        <ul>
+            <% data.hobbies.forEach((item)=>{%>
+                <li>
+                   <a href="/upload/<%=item%>"><%=item%></a>
+                </li>
+                <%});%>
+        </ul> </div>
+ </div>
+ 
+ <div class="column3" > 
+ <p>ChatBox here.</p>
+    <ul id="messages" height="200px"></ul>
+    <form id="chatForm" action="">
+      <input id="m" autocomplete="off" /><button type="submit">Send</button>
+    </form>
+      
+    <form id="chatForm2" action="/upload" method="post" enctype="multipart/form-data">
+	 
+	 <input type="file" name="fileupload" />
+    
+      <button type="submit">Upload</button><hr><hr><br>
+To meet your friends, go  <br>
+<a href="./party.html">vedio meeting</a>
+
+		
+    </form>
+ </div> 
+</div>  
+</body>
+<script>
+ 
+ var socket = io();
+  socket.connect();
+
+		
+		
+      var form = document.getElementById("chatForm");
+     
+      form.onsubmit = function(e) {
+        e.preventDefault(); // prevents page reloading
+        var messageInput = document.getElementById("m");
+         //send chat message to the server
+		 socket.connect();
+        socket.emit('chat message', messageInput.value);
+        console.log(messageInput.value);
+        messageInput.value = "";
+        return false;
+      };
+	
+     //show chat message emitted from the server
+      socket.on('chat message', function(msg){
+        var node = document.createElement("li");             
+        var textnode = document.createTextNode(msg);         
+        node.appendChild(textnode);
+        var ms=document.getElementById("messages");
+		if (ms.childElementCount>8){
+        ms.removeChild(ms.children[0]);}
+        ms.appendChild(node);
+      });
+	  
+     
+    	  
+
+  </script>
+</html>

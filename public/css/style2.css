@@ -1,0 +1,186 @@
+/**/
+#nav{
+	
+  list-style-type: none;
+  width: 100%;
+ 
+  padding: 0;
+  overflow: hidden;
+  background-color: #0000aa;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #AAAAFF;
+}
+    #nav ul {
+            position: absolute;
+            padding: 0;
+            left: 0;
+            display: none;
+		
+        }
+
+    
+      
+    #nav li:hover #courses {
+  display: block;
+  background-color: #AAAAFF;
+  /* shows sub-sublist on hover */
+  margin-left: 4%;
+  width: 160px;
+   text-align: left;
+     }
+    #nav li:hover #projects {
+  display: block;
+  background-color: #AAAAFF;
+  /* shows sub-sublist on hover */
+  margin-left: 10%;
+  width: 150px;
+   text-align: left;
+     }	 
+	 
+body {
+	font: 13px/19px  Arial, Helvetica, sans-serif;
+	color:#666565;
+	position:relative;
+	min-width:960px;
+	background-color: lightblue;
+}
+
+.grid-container {
+	width: 90%;
+  
+    margin-left: 5%; 
+    margin-right: 5%;
+
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 10px;
+  padding: 1px;
+ background-color: lightblue;
+}
+
+
+.grid-container2 {
+	width: 90%;
+  
+    margin-left: 5%; 
+    margin-right: 5%;
+
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto;
+  grid-gap: 10px;
+  padding: 1px;
+ background-color: lightblue;
+}
+.mybody{
+	width: 90%;
+  
+    margin-left: 5%; 
+    margin-right: 5%;
+}
+.mybody > h1{
+  text-align: center;
+  font-size: 15px;
+}
+ .hobby >img {
+    width: 100%;
+    height: 100%;
+  }
+  
+.grid-container > div {
+ /* background-color: gray;*/
+ /* text-align: center;*/
+  padding: 20px 0;
+  font-size: 15px;
+  color: blue;
+}
+.grid-container2 > div {
+  background-color: #EEEEFF;
+ /* text-align: center;*/
+  padding: 20px 0;
+  font-size: 15px;
+  color: blue;
+}
+
+#thumbs {   
+    width: 100%;
+  
+    margin-left: 5px; 
+    margin-right: 5px;
+
+     text-align: justify;
+    -ms-text-justify: distribute-all-lines;
+    text-justify: distribute-all-lines;
+}
+#thumbs img {
+	width:32%;
+	/*height:350px;*/
+    vertical-align: top;
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+.stretch {
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0
+}
+.grid-container .flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: lightblue;
+}
+
+.grid-container .flex-container > div {
+  width: 15%;
+height: 200px;
+color:blue;
+margin-left: 8px;
+margin-top: 2px;
+margin-bottom: 2px;
+-moz-border-radius: 12px;
+-webkit-border-radius: 12px;
+border-radius: 6px;
+-moz-box-shadow: 4px 4px 14px #000;
+-webkit-box-shadow: 4px 4px 14px #000;
+box-shadow: 4px 4px 2px #000;
+
+}
+
+#my img {
+   /* width: 100%;  or any custom size 
+    height: 100%; */
+ /*	align: left;*/
+    object-fit: contain;
+}
+header a:hover {
+	color: #000;
+}
+.footer {
+   position: fixed;
+   bottom: 0;
+   margin:0;
+   width: 96%;
+   background-color: #0000aa;
+  text-align: center;
+   display: flex;
+  justify-content: space-between;
+}

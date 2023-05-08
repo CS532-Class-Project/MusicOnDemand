@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" media="screen and (min-width: 800px)" href="./css/style1.css">
+        <link rel="stylesheet" media="screen and (max-width: 800px)" href="./css/style2.css">
+<link  type="css" rel="stylesheet" href="./css/styleV.css" >
+<style>
+      #chatForm input { border: 0; padding: 10px; width: 80%; margin-right: 5%; }
+      #messages {display:table-row;list-style-type: none; margin: 0; padding: 0; }
+      #messages li {   padding: 5px 10px; }
+      #messages li:nth-child(odd) { background: #eee; }     	   
+</style>	
+<script src="./socket.io/socket.io.js"></script>
+
+  <body>
+  <header>
+	<h1 style="text-align:center">Music Streaming</h1>
+	<p style="float:right; margin-right: 4%; ">
+     <% if(user.username != undefined) { %>
+	 <input type="hidden" id="vars" value="<%=user.username %>">
+      Welcome to <%=user.username %><% } %>	
+     <a href="./logout">Logout</a> </p>
+	 
+  <%- include("../partials/header") %>
+      
+  </header> 
+  <div class="grid-container2">
+    <div > 
+	<video id="myvid" width="98%" height="300" 
+	src="./upload/life.mp4" type="video/mp4" controls autoplay>
+ </video>
+	<p>
+	
+    <form id="chatForm" action="">
+      <input id="m" autocomplete="off" /><button type="submit">Send</button>
+	<p>Comments here.</p>
+    <ul id="messages" height="200px"></ul>
+
+    </form>
+	<p>Baokun Li: this is really nice, I like it.</br>
+	Baokun Li: I love it.</br>
+	
+    </div>
+    <div class="grid-container">
+    
+	
+	 <% for(music of musics) { %>
+        
+    
+	<div class="box">
+     <div class="divL" >
+       <img src="./upload/<%=music.imageFile %>" onclick="myFunction(this)"></img>
+
+     </div>
+     <div class="divR" >
+       Name: <%= music.name %> </br>
+       Area: <%= music.ctArea %> </br>
+       Author: <%= music.author %></br>
+       Style: <%= music.style %></br>
+       Year: <%= music.year %></br>
+	   
+     </div>
+    </div>
+    <% } %>	
+    </div>
+  </div>
+        <%- include("../partials/footer") %>
+     
+     
+      
+    
+  </body>
+  <script>
+       function myFunction(element){
+         var thing = element.src;
+		 const myArray =thing.split("/");
+		 
+		 var ss=myArray[myArray.length-1];
+		 var top=ss[0].toLowerCase();
+		  
+		  ss=ss.replace("jpg","mp4");
+		 ss=ss.replace("png","mp4");
+		 
+		 ss=ss.replace(ss[0],top);
+		 const elem = document.getElementById("myvid");
+		 elem.src="./upload/"+ss;
+		 var ms=document.getElementById("messages");
+		 while (ms.firstChild) {
+        ms.removeChild(ms.firstChild);
+    }
+       }
+	 var socket = io();
+     socket.connect();
+
+		
+		const elem2 = document.getElementById("vars");
+
+      var form = document.getElementById("chatForm");
+     
+      form.onsubmit = function(e) {
+        e.preventDefault(); // prevents page reloading
+        var messageInput = document.getElementById("m");
+         //send chat message to the server
+		 socket.connect();
+		 var x= elem2.value;
+		 x=x+": "+messageInput.value;
+        socket.emit('chat message',x);
+        console.log(messageInput.value);
+        messageInput.value = "";
+        return false;
+      };
+	
+     //show chat message emitted from the server
+      socket.on('chat message', function(msg){
+        var node = document.createElement("li");             
+        var textnode = document.createTextNode(msg);         
+        node.appendChild(textnode);
+        var ms=document.getElementById("messages");
+		if (ms.childElementCount>20){
+        ms.removeChild(ms.children[0]);}
+		ms.insertBefore(node,ms.children[0]);
+    //    ms.appendChild(node);
+      });
+
+    </script>
+</html>
