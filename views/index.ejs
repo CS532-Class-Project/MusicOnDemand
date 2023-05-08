@@ -23,9 +23,8 @@
   </header> 
   <div class="grid-container2">
     <div > 
-	<video width="98%" height="300" 
-	src="./upload/life.mp4" type="video/mp4" controls autoplay>
- </video>
+	<video width="98%" height="300" src="./upload/life.mp4" type="video/mp4" controls autoplay>
+  </video>
 	<p>
 	ff</br>
 	fff</br>
@@ -45,6 +44,18 @@
        Year: 1950</br>
      </div>
     </div> 
+
+    <form action="/user" method="post">
+      <h2>Login</h2>
+      <div class="input-field">
+          <input type="text" name="username" id="username" placeholder="Enter Username">
+      </div>
+      <div class="input-field">
+          <input type="password" name="password" id="password" placeholder="Enter Password">
+      </div>
+      <input type="submit" value="LogIn">
+    </form>
+
     </div>
   </div>
         <%- include("./partials/footer") %>
