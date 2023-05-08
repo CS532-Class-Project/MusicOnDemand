@@ -18,6 +18,18 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
+
+// setting up the cookie expiration
+const oneDay = 1000 * 60 * 60 * 24;
+
+// setting up session options
+app.use(sessions({
+    secret: "thisismysecrctekeyfhrgfgrfrty84fwir767",
+    saveUninitialized:true,
+    cookie: { maxAge: oneDay },
+    resave: false 
+}));
+
 //following part for class helper project
 let directory_name = "upload";
   
